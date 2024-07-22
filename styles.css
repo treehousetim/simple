@@ -1,0 +1,235 @@
+:root {
+    --brand-color: #109FEB;
+    --brand-color-light: #4AB1F2; /* Calculated as 15% lighter */
+
+    --background-light: #f0f0f0;
+    --text-light: #333;
+
+    --background-dark: #333;
+    --text-dark: #eee;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-light);
+    color: var(--text-light);
+}
+
+header {
+    background: var(--background-dark);
+    color: var(--text-dark);
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 2.5rem; /* 40px */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 0.9375rem; /* 15px */
+}
+
+.nav-links li a {
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.extra-elements {
+    display: flex;
+    align-items: center;
+}
+
+.cta-button {
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    background: var(--brand-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background: var(--brand-color-light);
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-icon span {
+    background: var(--text-dark);
+    height: 0.125rem; /* 2px */
+    margin: 0.25rem 0; /* 4px */
+    width: 1.5625rem; /* 25px */
+}
+
+.section {
+    padding: 3.75rem 1.25rem; /* 60px 20px */
+    text-align: center;
+}
+
+.container {
+    max-width: 75rem; /* 1200px */
+    margin: 0 auto;
+}
+
+h1, h2 {
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+footer {
+    background: var(--background-light);
+    color: var(--text-light);
+    text-align: center;
+    padding: 0.625rem 0; /* 10px 0 */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Grid System */
+.row, .row-3 {
+    display: grid;
+    grid-gap: 0.625rem; /* 10px */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.row-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.row-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.row-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.row-6 {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.row-7 {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.row-8 {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.row-9 {
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.row-10 {
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.row-11 {
+    grid-template-columns: repeat(11, 1fr);
+}
+
+.row-12 {
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.row > div, .row-1 > div, .row-2 > div, .row-3 > div, .row-4 > div, .row-5 > div, .row-6 > div, .row-7 > div, .row-8 > div, .row-9 > div, .row-10 > div, .row-11 > div, .row-12 > div {
+    padding: 0.625rem; /* 10px */
+}
+
+@media (max-width: 1200px) {
+    .row, .row-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10, .row-11, .row-12 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .row, .row-1, .row-2, .row-3, .row-4, .row-5, .row-6, .row-7, .row-8, .row-9, .row-10, .row-11, .row-12 {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--background-dark);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    header {
+        background: var(--background-light);
+        color: var(--text-light);
+    }
+
+    .nav-links li a {
+        color: var(--text-light);
+    }
+
+    .menu-icon span {
+        background: var(--text-light);
+    }
+
+    footer {
+        background: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    .nav-links {
+        background: var(--background-light);
+    }
+}
