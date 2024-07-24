@@ -129,36 +129,36 @@ nav {
     width: 1.5625rem; /* 25px */
 }
 
-
-section,.section,
-section.space-md,.section.space-md {
+section, .section,
+section.space-md, .section.space-md {
     padding: 2rem 1rem; /* 60px 20px */
 }
 
-section.space-lg,.section.space-lg {
+section.space-lg, .section.space-lg {
     padding: 3.75rem 1.25rem; /* 60px 20px */
 }
 
-section.space-sm,.section.space-sm {
-    padding: .75rem .75rem;
+section.space-sm, .section.space-sm {
+    padding: 0.75rem 0.75rem;
 }
 
-section.center,.section.center {
+section.center, .section.center {
     text-align: center;
 }
 
 section .tp {
-    padding-top: .625rem;
+    padding-top: 0.625rem;
 }
 
 section .bp {
-    padding-bottom: .625rem;
+    padding-bottom: 0.625rem;
 }
 
 .site-container-lg,
 .site-container, .site-container-md,
 .site-container-sm {
-    margin: 0 auto; }
+    margin: 0 auto;
+}
 
 .site-container-lg {
     max-width: 95rem;
@@ -171,8 +171,6 @@ section .bp {
 .site-container-sm {
     max-width: 55rem;
 }
-
-
 
 h1, h2 {
     margin-bottom: 1.25rem; /* 20px */
@@ -187,7 +185,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 
 /* Responsive Grid System */
 .row, .row-1, .row-2, .row-3, .row-4, .row-5, .row-6,
@@ -248,7 +245,6 @@ footer {
 .row-4 > div, .row-5 > div, .row-6 > div, .row-7 > div,
 .row-8 > div, .row-9 > div, .row-10 > div, .row-11 > div, .row-12 > div {
     padding: 0.625rem; /* 10px */
-
 }
 
 @media (max-width: 1200px) {
@@ -262,12 +258,12 @@ footer {
 }
 
 @media (max-width: 768px) {
-    section,.section {
+    section, .section {
         padding: 1.25rem 1rem;
     }
 
     nav {
-        display:flex;
+        display: flex;
         align-items: center;
     }
 
@@ -296,11 +292,11 @@ footer {
     .nav-links li > a:active {
         background-color: var(--dropdown-nav-hover);
         color: var(--dropdown-nav-text);
-    } 
+    }
 
     .nav-links.active {
         display: initial;
-        text-align: center;;
+        text-align: center;
     }
 
     .menu-icon {
