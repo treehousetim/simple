@@ -63,6 +63,10 @@ body {
     color: var(--text-light);
 }
 
+section>img {
+    max-width: 90%;
+    margin: .1rem 0;
+}
 section p>img, .section p>img {
     float: right;
     max-width: 40%;
@@ -227,6 +231,7 @@ section .bp {
 .mw-xs, .mw-sm, .mw-md, .mw-lg
 .site-container, .site-container-md,
 .site-container-sm {
+    padding-bottom: calc( 1.6rem + .625rem + .625rem );
     margin: 0 auto;
 }
 
@@ -252,12 +257,12 @@ h1, h2 {
 }
 
 footer {
-    background: var(--background-light);
-    color: var(--text-light);
+    background: var(--background-dark);
+    color: var(--text-dark);
     text-align: center;
     padding: 0.625rem 0; /* 10px 0 */
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
 }
 
@@ -451,4 +456,10 @@ h6, .h6 { font-size: var(--h6-font-size); }
     h4, .h4 { font-size: var(--h4-font-size-sm); }
     h5, .h5 { font-size: var(--h5-font-size-sm); }
     h6, .h6 { font-size: var(--h6-font-size-sm); }
+}
+
+
+.zm {
+    margin-top:0 !important;
+    margin-bottom:0 !important;
 }
