@@ -81,6 +81,43 @@ section p>img.l, .section p>img.l {
     padding-bottom: .625rem;
 }
 
+section>img.flexy, .section>img.flexy,
+section>img.flexy-sm, .section>img.flexy-sm,
+section>img.flexy-md, .section>img.flexy-md,
+section>img.flexy-lg, .section>img.flexy-lg {
+    width: 98%;
+    object-fit: cover;
+    object-position: top;
+}
+section>img.flexy-sm, .section>img.flexy-sm {
+    height: 20vh;
+}
+section>img.flexy-md, .section>img.flexy-md,
+section>img.flexy, .section>img.flexy {
+    height: 30vh;
+}
+
+section>img.flexy-lg, .section>img.flexy-lg {
+    height: 50vh;
+}
+
+section>img.sm, .section>img.sm {
+    max-width: 20%;
+}
+
+section>img.md, .section>img.md {
+    max-width: 40%;
+}
+
+section>img.lg, .section>img.lg {
+    max-width: 60%;
+}
+
+section>img.xl, .section>img.xl {
+    max-width: 98%;
+}
+
+
 section ul{
     width: fit-content;
     text-align: left;
@@ -131,6 +168,7 @@ nav {
 
 .logo img {
     height: var(--logo-height);
+    max-width: calc( 100vw/3);
     display: block; /* Ensure no extra space is added */
 }
 
@@ -208,7 +246,7 @@ section.space-md, .section.space-md {
 }
 
 section.space-lg, .section.space-lg {
-    padding: 3.75rem 1.25rem; /* 60px 20px */
+    padding: 3.75rem 1.5rem;
 }
 
 section.space-sm, .section.space-sm {
@@ -352,6 +390,18 @@ footer {
 }
 
 @media (max-width: 768px) {
+    ul {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+    nav .cta-button {
+        padding: 0.625rem .5rem;
+    }
+
+    .menu-icon {
+        padding: 9px .625rem 9px .625rem;
+    }
+
     section, .section {
         padding: 1.25rem 1rem;
     }
@@ -362,6 +412,7 @@ footer {
     }
 
     .nav-links {
+        margin-left: 0 !important;
         display: none;
         flex-direction: column;
         width: 100%;
@@ -400,6 +451,10 @@ footer {
     .row, .row-1, .row-2, .row-3, .row-4, .row-5, .row-6,
     .row-7, .row-8, .row-9, .row-10, .row-11, .row-12 {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .mw-sm,.site-container-sm {
+        max-width: 400px;
     }
 }
 
