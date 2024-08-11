@@ -12,7 +12,7 @@ Everything is laid out directly
 * `/src/js` is the tiny bit of javascript
 
 
-[Preview Here](https://treehousetim.github.io/simple/)
+[Preview Here](https://treehousetim.github.io/simple/src/)
 
 ## Features
 - **Responsive Grid System**: Predefined grid classes for flexible layout management.
