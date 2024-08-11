@@ -3,6 +3,15 @@
 ## Overview
 simple allows you to create responsive landing pages quickly and easily, utilizing HTML, CSS, and minimal JavaScript. The design adapts to light and dark modes based on the user's operating system settings.  Zero Dependencies.
 
+## Directory Structure
+Code is in the src directory
+Everything is laid out directly
+* `/src` is the main codebase.
+* `/src/css` is css
+* `/src/images` is images
+* `/src/js` is the tiny bit of javascript
+
+
 [Preview Here](https://treehousetim.github.io/simple/)
 
 ## Features
