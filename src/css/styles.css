@@ -1,12 +1,11 @@
-/* Root Variables */
 :root {
     /* Font Families */
     --simple-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --body-font-family: var(--simple-sans-serif);
 
     /* Brand Colors */
-    --brand-color: #109FEB;
-    --brand-color-light: #4AB1F2; /* 15% lighter */
+    --brand-color: #bc3f9f;
+    --brand-color-light: #dfa0d0;
 
     /* Call-to-Action Colors */
     --cta-bg: var(--brand-color);
@@ -23,6 +22,9 @@
     --text-light: #333;
     --background-dark: #333;
     --text-dark: #eee;
+
+    --link-light: #dfa0d0;
+    --link-dark: #bc3f9f;
 
     /* Logo */
     --logo-height: 3rem; /* Adjust logo height as needed */
@@ -67,6 +69,16 @@ body {
     font-family: var(--body-font-family);
     background-color: var(--background-light);
     color: var(--text-light);
+}
+
+/* Default Anchor Styles */
+a {
+    color: var(--link-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Section Styles */
@@ -190,7 +202,7 @@ li b, li strong {
 }
 
 /* Header Styles */
-body>header {
+body > header {
     background: var(--background-dark);
     color: var(--text-dark);
     padding: 0.625rem 1.25rem; /* 10px 20px */
@@ -243,6 +255,10 @@ nav {
 .nav-links li a {
     color: var(--text-dark);
     text-decoration: none;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
 }
 
 /* Extra Elements Styles */
@@ -365,6 +381,11 @@ footer {
     padding: 0.625rem 0; /* 10px 0 */
     width: 100%;
 }
+
+footer a {
+        color: var(--link-light);
+        text-decoration: none;
+    }
 
 /* Responsive Grid System */
 .row {
@@ -496,6 +517,18 @@ footer {
     .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .mw-lg, .site-container-lg {
+        max-width: 90%;
+    }
+
+    .mw-md, .site-container-md {
+        max-width: 80%;
+    }
+
+    .mw-sm, .site-container-sm {
+        max-width: 70%;
+    }
 }
 
 /* Responsive Styles for Small Screens */
@@ -565,7 +598,7 @@ footer {
     }
 
     .mw-sm, .site-container-sm {
-        max-width: 400px;
+        max-width: 80%;
     }
 
     .row img.half {
@@ -580,27 +613,35 @@ footer {
         color: var(--text-dark);
     }
 
-    body>header {
-        background: var(--background-light);
-        color: var(--text-light);
+    a {
+        color: var(--link-light);
+        text-decoration: none;
     }
 
-    .nav-links li a {
-        color: var(--text-light);
-    }
-
-    .menu-icon span {
-        background: var(--text-light);
+    /* Keep header and footer dark */
+    body > header {
+        background: var(--background-dark);
+        color: var(--text-dark);
+        border-bottom: 1px solid #ccc;
     }
 
     footer {
+        border-top: 1px solid #ccc;
         background: var(--background-dark);
         color: var(--text-dark);
     }
 
-    .nav-links {
+    /*.nav-links li a {
+        color: var(--text-light);
+    }*/
+
+    /*.menu-icon span {
+        background: var(--text-light);
+    }*/
+
+    /*.nav-links {
         background: var(--background-light);
-    }
+    }*/
 }
 
 /* Heading Font Sizes */
@@ -632,7 +673,12 @@ h6, .h6 { font-size: var(--h6-font-size); }
 }
 
 /* Margin Zero Classes */
-.zm {
+.zmzm, .zm {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+}
+
+.zmzm {
+    margin-left: 0px;
+    margin-right: 0px;
 }
